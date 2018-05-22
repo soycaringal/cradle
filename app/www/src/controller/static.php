@@ -12,6 +12,10 @@ $this->get('/', function ($request, $response) {
     //Prepare body
     $data = [];
 
+    if ($data=1) {
+echo "test";
+    }
+
     //Render body
     $class = 'page-home';
     $title = cradle('global')->translate('Cradle OMS');
