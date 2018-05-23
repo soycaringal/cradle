@@ -16,6 +16,8 @@ $this->get('/', function ($request, $response) {
 echo "test";
     }
 
+    cradle()->inspect('test');exit;
+
     //Render body
     $class = 'page-home';
     $title = cradle('global')->translate('Cradle OMS');
@@ -27,7 +29,7 @@ echo "test";
         ->setPage('class', $class)
         ->setContent($body);
 
-    //Render blank page
+    //Render blank page-home
     $this->trigger('www-render-page', $request, $response);
 });
 
