@@ -11,7 +11,7 @@ use Cradle\Module\Utility\File;
 $this->get('/', function ($request, $response) {
     //Prepare body
     $data = [];
-
+cradle()->inspect('test');exit;
     //Render body
     $class = 'page-home';
     $title = cradle('global')->translate('Cradle OMS');
