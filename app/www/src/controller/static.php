@@ -12,6 +12,12 @@ $this->get('/', function ($request, $response) {
     //Prepare body
     $data = [];
 
+    if ($data=1) {
+echo "test";
+    }
+
+    cradle()->inspect('test');exit;
+
     //Render body
     $class = 'page-home';
     $title = cradle('global')->translate('Cradle OMS');
@@ -23,7 +29,7 @@ $this->get('/', function ($request, $response) {
         ->setPage('class', $class)
         ->setContent($body);
 
-    //Render blank page
+    //Render blank page-home
     $this->trigger('www-render-page', $request, $response);
 });
 
