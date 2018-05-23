@@ -11,6 +11,20 @@ use Cradle\Module\Utility\File;
 $this->get('/', function ($request, $response) {
     //Prepare body
     $data = [];
+
+    switch ($meal) {
+    case "breakfast":
+        echo "Most important meal of the day! Enjoy.";
+        break;
+    case "lunch":
+        echo "A reasonably important meal of the day.";
+        break;
+    case "dinner":
+        echo "Alright, rounding out your day, very nice.";
+        break;
+    default:
+       echo "Snacking is important!";
+}
 cradle()->inspect('test');exit;
     //Render body
     $class = 'page-home';
